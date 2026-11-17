@@ -1,13 +1,12 @@
 {
   "name": "vikingo-estudios-hugo",
   "version": "2.0.0",
-  "description": "Sitio oficial de Vikingo Estudios (Buenos Aires, Argentina) construido con Hugo y desplegado en Cloudflare Workers.",
+  "description": "Sitio oficial de Vikingo Estudios (Buenos Aires, Argentina) construido con Hugo y alojado en Cloudflare Pages.",
   "private": true,
   "scripts": {
     "start": "hugo server --buildDrafts --disableFastRender",
     "dev": "hugo server --buildDrafts --disableFastRender",
     "build": "hugo --gc --minify",
-    "deploy": "hugo --gc --minify && npx wrangler deploy",
     "deploy:gh-pages": "bash scripts/deploy-gh-pages.sh"
   }
 }

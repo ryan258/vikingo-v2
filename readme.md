@@ -25,16 +25,14 @@ npm run build
 npm run deploy
 ```
 
-## Publicación en Cloudflare Workers & Pages
+## Publicación en Cloudflare Pages & GitHub Pages (100% Gratuito)
 
-- **Cloudflare Workers Static Assets (En Vivo)**:
-  - URL en producción: `https://vikingo-v2.ryanleejwebdev.workers.dev/`
-  - Configuración: `wrangler.jsonc` (`assets.directory = "./public"`, `not_found_handling = "404-page"`, `html_handling = "auto-trailing-slash"`)
-  - Comando de publicación: `npm run deploy` (`hugo --gc --minify && npx wrangler deploy`)
-- **Cloudflare Pages (Git conectado)**:
-  - URL: `https://vikingo-v2.pages.dev/`
+- **Cloudflare Pages (Principal · En Vivo)**:
+  - URL en producción: `https://vikingo-v2.pages.dev/`
   - Repositorio vinculado: `ryan258/vikingo-v2` (rama de producción: `master`)
-- **GitHub Pages (Alternativo)**:
+  - Comando de compilación automático en cada push: `hugo --gc --minify -b $CF_PAGES_URL` (`HUGO_VERSION = 0.166.0`, directorio `public`)
+  - Encabezados de caché y seguridad: `static/_headers`
+- **GitHub Pages (Espejo gratuito)**:
   - Workflow automático en `.github/workflows/hugo.yml` o rama manual `gh-pages` vía `npm run deploy:gh-pages` (`scripts/deploy-gh-pages.sh`).
 
 ## Estructura del proyecto
