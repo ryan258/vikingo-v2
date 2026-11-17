@@ -1,0 +1,266 @@
+{{ define "main" }}
+<section class="hero-stage">
+  <div class="hero-media">
+    {{ partial "picture.html" (dict
+      "src" "/img/hero-home-main.jpg"
+      "alt" "Sala principal de grabación de Vikingo Estudios con difusores de madera, panel de piedra natural y piano vertical Bentley"
+      "sizes" "100vw"
+      "priority" true
+      "class" "hero-bg-img"
+    ) }}
+    <div class="hero-vignette"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-badge-row">
+      <span class="studio-pill">
+        <span class="vu-dot" aria-hidden="true"></span>
+        Inaugurado a principios de 2009 · Ciudad Evita, Buenos Aires
+      </span>
+      <span class="studio-code">«DE LOS SIETE MARES»</span>
+    </div>
+
+    <h1 class="hero-title">
+      Donde la madera respira<br>
+      <em>y la cinta no miente.</em>
+    </h1>
+
+    <p class="hero-lead">
+      Vikingo Estudios es una creación artesanal de la <strong>familia Martorelli</strong>: una sala viva diseñada desde los cimientos con difusores de madera, resonadores diafragmáticos y piedra natural, cruzada con cinta abierta de una pulgada y fierros alemanes de época.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ "contacto/" | relURL }}">
+        Armar una sesión
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="{{ "equipamiento/" | relURL }}">
+        Explorar los fierros
+      </a>
+      <a class="btn btn-link" href="{{ "historia/" | relURL }}">
+        Conocer la acústica de la sala →
+      </a>
+    </div>
+
+    <dl class="hero-metrics" aria-label="Datos técnicos destacados del estudio">
+      <div class="metric-item">
+        <dt>Consola Principal</dt>
+        <dd>Soundcraft Studio 32ch <span>(UK)</span></dd>
+      </div>
+      <div class="metric-item">
+        <dt>Grabación Magnética</dt>
+        <dd>Tascam 85-16B <span>Cinta 1" · 16 canales</span></dd>
+      </div>
+      <div class="metric-item">
+        <dt>Color & Preamp</dt>
+        <dd>Telefunken V72 / V672 <span>+ API 312 & 2500</span></dd>
+      </div>
+      <div class="metric-item">
+        <dt>Acústica en Piso</dt>
+        <dd>Curva Plana Natural <span>Difusores & Piedra Viva</span></dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="lineage-ribbon" aria-label="Trayectoria y artistas vinculados">
+  <div class="container">
+    <div class="lineage-inner">
+      <span class="lineage-label">Huella y oficio compartido con:</span>
+      <ul class="lineage-list">
+        {{ range hugo.Data.staff.lineage_artists }}
+          <li>{{ .name }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section manifesto-section">
+  <div class="container">
+    <div class="manifesto-grid">
+      <div class="manifesto-copy">
+        <p class="eyebrow">El Refugio · «De los siete mares»</p>
+        <h2 class="section-title">Salir del ruido de la autopista para entrar en el tiempo del disco.</h2>
+        <p class="lead-paragraph">
+          A minutos de Capital, lejos del apuro del reloj de taxi y de las peceras sin aire, levantamos una casa pensada para que las bandas toquen mirándose a los ojos.
+        </p>
+        <p>
+          Acá la acústica no se corrige con plugins: está tallada en la geometría del cuarto. Los resonadores diafragmáticos y los difusores de madera entregan una respuesta naturalmente plana y una reverberación pareja en todo el espectro. Un tambor Ludwig del '60, un piano vertical Bentley o un Fender Bassman al taco suenan con el peso real que tienen en el piso.
+        </p>
+        <div class="manifesto-signature">
+          <img src="{{ "img/vikingo-logo.png" | relURL }}" alt="" width="52" height="52" loading="lazy">
+          <div>
+            <strong>Familia Martorelli</strong>
+            <span>Claudio «Vikingo», Nahuel y Damián «Cooczon»</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="manifesto-visual">
+        <figure class="studio-frame">
+          {{ partial "picture.html" (dict
+            "src" "/img/equipamiento/equiment-banner.jpg"
+            "alt" "Grabadora de cinta abierta Tascam de 16 canales, cabezal Fender Bassman 135 y racks con preamplificadores Telefunken, Siemens y API en Vikingo Estudios"
+            "sizes" "(max-width: 900px) 100vw, 50vw"
+          ) }}
+          <figcaption>
+            <span class="mono-tag">FIG. 01 · CONTROL ROOM</span>
+            Tascam 85-16B de 1 pulgada, Fender Bassman 135 Silverface y la torre de módulos Telefunken, Siemens W295 y API 2500.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section services-home-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Los Cuatro Oficios</p>
+        <h2 class="section-title">Desde la chispa del ensayo hasta el corte final.</h2>
+      </div>
+      <a class="btn btn-outline" href="{{ "servicios/" | relURL }}">Ver detalle de servicios →</a>
+    </div>
+
+    <div class="services-card-grid">
+      {{ range hugo.Data.servicios }}
+        <article class="service-card">
+          <div class="service-card-media">
+            {{ partial "picture.html" (dict
+              "src" .image
+              "alt" .alt
+              "sizes" "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            ) }}
+            <span class="service-number">{{ .number }}</span>
+          </div>
+          <div class="service-card-body">
+            <p class="service-kicker">{{ .kicker }}</p>
+            <h3><a href="{{ "servicios/" | relURL }}#{{ .id }}">{{ .title }}</a></h3>
+            <p>{{ .summary }}</p>
+            <ul class="service-mini-list">
+              {{ range .highlights }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section gear-showcase-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Ficha Técnica & Backline</p>
+        <h2 class="section-title">Fierros con alma, válvulas y madera.</h2>
+      </div>
+      <a class="btn btn-primary" href="{{ "equipamiento/" | relURL }}">Abrir ficha técnica completa →</a>
+    </div>
+
+    <div class="gear-bento">
+      {{ range first 6 hugo.Data.equipamiento.categories }}
+        <article class="gear-bento-card">
+          <div class="gear-bento-header">
+            <span class="mono-tag">{{ .group }}</span>
+            <h3>{{ .title }}</h3>
+            <p>{{ .kicker }}</p>
+          </div>
+          <ul class="gear-spec-list">
+            {{ range first 5 .items }}
+              <li>
+                <span class="gear-qty">{{ .qty }}</span>
+                <span class="gear-name">{{ .name }}</span>
+                <span class="gear-badge">{{ .tag }}</span>
+              </li>
+            {{ end }}
+          </ul>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section staff-home-section">
+  <div class="container">
+    <div class="staff-banner-card">
+      <div class="staff-banner-media">
+        {{ partial "picture.html" (dict
+          "src" "/img/header-historia.jpg"
+          "alt" "Nahuel, Claudio «Vikingo» y Damián «Cooczon» Martorelli frente a la ventana del control room de Vikingo Estudios"
+          "sizes" "(max-width: 900px) 100vw, 50vw"
+        ) }}
+      </div>
+      <div class="staff-banner-content">
+        <p class="eyebrow">El Equipo · Casa de Familia</p>
+        <h2 class="section-title">Tres Martorelli, una misma obsesión por el audio.</h2>
+        <p>
+          Al frente del estudio está <strong>Claudio «Vikingo» Martorelli</strong> —forjado en giras y grabaciones junto a Gustavo Cerati, Fabiana Cantilo, Babasónicos, Daniel Melero, Karamelo Santo, Molotov y Memphis La Blusera— acompañado por <strong>Nahuel Martorelli</strong> en la producción artística y <strong>Damián «Cooczon» Martorelli</strong> en la ingeniería de grabación y mezcla.
+        </p>
+        <div class="staff-mini-roster">
+          {{ range hugo.Data.staff.members }}
+            <div class="staff-mini-pill">
+              <strong>{{ .name }}</strong>
+              <span>{{ .role }}</span>
+            </div>
+          {{ end }}
+        </div>
+        <a class="btn btn-outline" href="{{ "staff/" | relURL }}">Conocer al equipo y su historia →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery-preview-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Archivo Visual</p>
+        <h2 class="section-title">Postales de sesión, fierros y obra.</h2>
+      </div>
+      <a class="btn btn-outline" href="{{ "galeria/" | relURL }}">Explorar las 50+ fotos del archivo →</a>
+    </div>
+
+    <div class="collection-cards">
+      {{ range hugo.Data.galeria.collections }}
+        <a class="collection-card" href="{{ "galeria/" | relURL }}#coleccion-{{ .id }}">
+          <div class="collection-card-img">
+            {{ partial "picture.html" (dict
+              "src" .cover
+              "alt" .title
+              "sizes" "(max-width: 640px) 100vw, 33vw"
+            ) }}
+            <span class="collection-count">{{ len .photos }} fotos</span>
+          </div>
+          <div class="collection-card-info">
+            <p class="mono-tag">{{ .kicker }}</p>
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section cta-banner-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-copy">
+        <p class="eyebrow">Ciudad Evita · Buenos Aires</p>
+        <h2>¿Tenés canciones pidiendo sala?</h2>
+        <p>
+          Vení a conocer el estudio, tomar unos mates en el control, escuchar cómo suena la sala en vivo y armar el plan a medida de tu disco, EP o sesión audiovisual.
+        </p>
+      </div>
+      <div class="cta-buttons">
+        <a class="btn btn-primary" href="{{ "contacto/" | relURL }}">Coordinar visita o reserva</a>
+        <a class="btn btn-ghost" href="mailto:{{ .Site.Params.emailStudio }}?subject=Hola%20Vikingo%20-%20Consulta%20de%20Sesi%C3%B3n">Escribir a {{ .Site.Params.emailStudio }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

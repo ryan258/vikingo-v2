@@ -1,0 +1,93 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="page-hero-media">
+    {{ partial "picture.html" (dict
+      "src" "/img/equipamiento/equiment-banner.jpg"
+      "alt" "Grabadora de cinta Tascam de 16 canales, cabezal Fender Bassman 135 y racks analógicos en Vikingo Estudios"
+      "sizes" "100vw"
+      "priority" true
+    ) }}
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">El Arsenal Analógico · Rider Técnico</p>
+    <h1>Fierros de época, cinta de una pulgada y backline con historia.</h1>
+    <p class="page-hero-lead">
+      Todo el equipamiento técnico y el backline del estudio están mantenidos al detalle y disponibles en sala para tu sesión.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="gear-toolbar">
+      <search class="gear-search-box" aria-label="Filtrar equipamiento del estudio">
+        <label for="gear-filter-input" class="sr-only">Buscar micrófono, preamplificador, amplificador o instrumento</label>
+        <input
+          type="search"
+          id="gear-filter-input"
+          class="gear-search-input"
+          placeholder="Filtrar por nombre o tipo (ej. Telefunken, U87, cinta, Ludwig, Rhodes, Heladera...)"
+        >
+      </search>
+
+      <div class="gear-category-pills" role="group" aria-label="Categorías de equipamiento">
+        <button type="button" class="pill-btn is-active" data-gear-cat="all" aria-pressed="true">Todo el arsenal</button>
+        {{ range hugo.Data.equipamiento.categories }}
+          <button type="button" class="pill-btn" data-gear-cat="{{ .id }}" aria-pressed="false">{{ .title }}</button>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="gear-catalog-grid" id="gear-catalog">
+      {{ range hugo.Data.equipamiento.categories }}
+        <section class="gear-category-block" id="cat-{{ .id }}" data-category="{{ .id }}">
+          <header class="gear-category-header">
+            <div>
+              <p class="mono-tag">{{ .group }}</p>
+              <h2>{{ .title }}</h2>
+              <p class="gear-category-desc">{{ .description }}</p>
+            </div>
+            <span class="gear-count-badge">{{ len .items }} ítems</span>
+          </header>
+
+          <ul class="gear-spec-table">
+            {{ range .items }}
+              <li class="gear-spec-row {{ if .featured }}is-featured{{ end }}" data-gear-text="{{ lower .name }} {{ lower .tag }}">
+                <span class="gear-qty">{{ .qty }}</span>
+                <span class="gear-name">
+                  {{ .name }}
+                  {{ if .featured }}<span class="star-mark" title="Pieza destacada de la casa" aria-label="Pieza destacada de la casa">★</span>{{ end }}
+                </span>
+                <span class="gear-badge">{{ .tag }}</span>
+              </li>
+            {{ end }}
+          </ul>
+        </section>
+      {{ end }}
+    </div>
+
+    <p id="gear-empty-state" class="gear-empty-msg" hidden>
+      No encontramos ningún ítem con ese filtro. Probá buscando otra marca o tocá «Todo el arsenal».
+    </p>
+  </div>
+</section>
+
+<section class="section cta-banner-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-copy">
+        <p class="eyebrow">Fotos Reales de Sala y Control</p>
+        <h2>¿Querés ver los micrófonos, preamps y baterías en detalle?</h2>
+        <p>
+          Recorré nuestra galería fotográfica de equipamiento o escribinos si necesitás consultar una configuración específica de canales para tu sesión.
+        </p>
+      </div>
+      <div class="cta-buttons">
+        <a class="btn btn-primary" href="{{ "galeria/" | relURL }}#coleccion-equipamiento">Ver fotos de los fierros</a>
+        <a class="btn btn-ghost" href="{{ "contacto/" | relURL }}">Consultar rider técnico</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

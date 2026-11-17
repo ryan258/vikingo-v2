@@ -1,0 +1,125 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="page-hero-media">
+    {{ partial "picture.html" (dict
+      "src" "/img/header-historia.jpg"
+      "alt" "La familia Martorelli en el estudio Vikingo"
+      "sizes" "100vw"
+      "priority" true
+    ) }}
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Nuestra Historia · Desde Principios de 2009</p>
+    <h1>Una obra artesanal hecha a pulmón, oído y madera.</h1>
+    <p class="page-hero-lead">
+      Vikingo Estudio es una creación íntegra de la familia Martorelli, realizadores tanto del diseño arquitectónico como de la acústica natural del recinto en Ciudad Evita.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="editorial-layout">
+      <article class="editorial-prose">
+        <h2>La filosofía acústica: que la sala toque con vos</h2>
+        <div class="prose-content">
+          {{ .Content }}
+        </div>
+
+        <figure class="editorial-quote">
+          <blockquote>
+            <p>«Un lugar ideal para registrar la verdad de los instrumentos acústicos y la electricidad de una banda tocando en el mismo piso, sin ecualizaciones forzadas ni cámaras artificiales.»</p>
+          </blockquote>
+          <figcaption>Manifiesto acústico de <cite>Vikingo Estudios (2009)</cite></figcaption>
+        </figure>
+
+        <h2>Ingeniería sin atajos: cómo funciona la sala</h2>
+        <div class="acoustic-pillars">
+          <div class="pillar-card">
+            <span class="mono-tag">01 · DIFUSIÓN ORGÁNICA</span>
+            <h3>Difusores de madera & piedra viva</h3>
+            <p>
+              Las paredes combinan módulos difusores de madera calculados a medida con un paño central de piedra natural irregular, dispersando las reflexiones tempranas sin robarle brillo ni armónicos al instrumento.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <span class="mono-tag">02 · CONTROL DE GRAVES</span>
+            <h3>Resonadores diafragmáticos</h3>
+            <p>
+              En lugar de apagar la sala con espuma, empleamos gran cantidad de resonadores diafragmáticos afinados según las dimensiones del cuarto, logrando una respuesta en bajas frecuencias firme, definida y sin bolas de graves.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <span class="mono-tag">03 · CURVA PLANA NATURAL</span>
+            <h3>Reverb pareja en todo el espectro</h3>
+            <p>
+              El equilibrio entre absorción diafragmática, techo acústico y piso de madera dura nos brinda una curva de ecualización naturalmente plana. Cuando abrís un par estéreo o un micrófono en figura de 8 en la sala, la espacialidad ya suena a disco.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <aside class="editorial-sidebar" aria-label="Ficha histórica del estudio">
+        <div class="sidebar-card">
+          {{ partial "picture.html" (dict
+            "src" "/img/nuestro-historia.jpg"
+            "alt" "Retrato en blanco y negro de Damián, Claudio y Nahuel Martorelli frente a los difusores del estudio"
+            "sizes" "(max-width: 920px) 100vw, 40vw"
+          ) }}
+          <div class="sidebar-card-body">
+            <p class="mono-tag">FUNDACIÓN · 2009</p>
+            <h3>La Cofradía Martorelli</h3>
+            <p>
+              Levantado ladrillo a ladrillo y listón por listón por Claudio «Vikingo», Nahuel y Damián «Cooczon» Martorelli en Ciudad Evita.
+            </p>
+            <dl class="sidebar-specs">
+              <div>
+                <dt>Inauguración</dt>
+                <dd>Principios de 2009</dd>
+              </div>
+              <div>
+                <dt>Ubicación</dt>
+                <dd>Ciudad Evita, Pcia. de Buenos Aires</dd>
+              </div>
+              <div>
+                <dt>Diseño Acústico</dt>
+                <dd>Familia Martorelli (Difusores + Resonadores Diafragmáticos)</dd>
+              </div>
+              <div>
+                <dt>Emblema</dt>
+                <dd>«De los siete mares»</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section construction-strip-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Memoria Constructiva · 2008 / 2009</p>
+        <h2 class="section-title">Así se levantó la sala desde los cimientos.</h2>
+      </div>
+      <a class="btn btn-outline" href="{{ "galeria/" | relURL }}#coleccion-construccion">Ver el álbum completo de construcción →</a>
+    </div>
+
+    <div class="construction-preview-grid">
+      {{ range index hugo.Data.galeria.collections 2 "photos" | first 6 }}
+        <figure class="construction-thumb">
+          {{ partial "picture.html" (dict
+            "src" .src
+            "alt" .title
+            "sizes" "(max-width: 640px) 100vw, 33vw"
+          ) }}
+          <figcaption>{{ .title }}</figcaption>
+        </figure>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,68 @@
+members:
+  - id: "claudio"
+    name: "Claudio «Vikingo» Martorelli"
+    role: "Fundador · Manager & Alma Mater"
+    badge: "Histórico del Rock Nacional"
+    image: "/img/staff/claudio.jpg"
+    width: 768
+    height: 432
+    quote: "Un estudio no se hace solo con ladrillos y cables; se hace con las horas de ruta, escenario y madrugada escuchando cómo respira un músico."
+    bio: "Con décadas de oficio en la primera línea del rock argentino y latinoamericano, el «Vikingo» volcó toda su experiencia de giras, escenarios y estudios en la creación artesanal de esta casa en 2009. Su recorrido junto a figuras fundamentales de nuestra música le dio al estudio su ética de trabajo: hospitalidad de barrio, rigor técnico de primer nivel y respeto absoluto por el artista."
+    artists:
+      - "Gustavo Cerati"
+      - "Fabiana Cantilo"
+      - "Babasónicos"
+      - "Daniel Melero"
+      - "Karamelo Santo"
+      - "Molotov"
+      - "Memphis La Blusera"
+
+  - id: "nahuel"
+    name: "Nahuel Martorelli"
+    role: "Músico · Productor Artístico"
+    badge: "Dirección & Arreglos"
+    image: "/img/staff/nahuel.jpg"
+    width: 768
+    height: 432
+    quote: "Cuando una banda entra a la sala, mi trabajo es sacarles la presión del reloj y encontrar ese momento irrepetible donde la canción despega."
+    bio: "Multiinstrumentista, compositor y productor. Criado entre cajas de equipos, consolas y ensayos, Nahuel combina la sensibilidad del músico en piso con la mirada arquitectónica del productor. Trabaja codo a codo con solistas y bandas en la preproducción, el diseño de audio, los arreglos de baterías, pianos y guitarras, y la dirección de toma para que cada proyecto encuentre su voz propia."
+    specialties:
+      - "Producción artística integral"
+      - "Arreglos y dirección de sesión"
+      - "Baterías, pianos y sintetizadores"
+
+  - id: "damian"
+    name: "Damián «Cooczon» Martorelli"
+    role: "Ingeniero de Sonido · Grabación & Mezcla"
+    badge: "Ingeniería & Acústica"
+    image: "/img/staff/damian.jpg"
+    width: 768
+    height: 432
+    quote: "Si el micrófono correcto está en el centímetro justo de una buena sala, no hace falta disfrazar nada en la mezcla."
+    bio: "Ingeniero en sonido y co-creador del diseño acústico de Vikingo Estudios. Damián domina al detalle el comportamiento físico de la sala, el alineamiento de fase, el ajuste de la grabadora de cinta abierta Tascam de 1 pulgada y el flujo híbrido entre los preamplificadores alemanes Telefunken y el entorno Pro Tools HD."
+    specialties:
+      - "Ingeniería de grabación y microfoneo avanzado"
+      - "Mezcla analógica/híbrida y mastering"
+      - "Operación de cinta abierta y mantenimiento de fierros"
+
+lineage_artists:
+  - name: "Gustavo Cerati"
+    note: "Trayectoria conjunta con Claudio Martorelli"
+  - name: "Fabiana Cantilo"
+    note: "Trayectoria conjunta con Claudio Martorelli"
+  - name: "Babasónicos"
+    note: "Trayectoria conjunta con Claudio Martorelli"
+  - name: "Daniel Melero"
+    note: "Trayectoria conjunta con Claudio Martorelli"
+  - name: "Karamelo Santo"
+    note: "Trayectoria conjunta con Claudio Martorelli"
+  - name: "Molotov"
+    note: "Trayectoria conjunta con Claudio Martorelli"
+  - name: "Memphis La Blusera"
+    note: "Trayectoria conjunta con Claudio Martorelli"
+  - name: "Mariano Esaín"
+    note: "Sesiones y producción en Vikingo Estudios"
+  - name: "Emanero"
+    note: "Sesiones en Vikingo Estudios"
+  - name: "Ella Es Tan Cargosa / Palo Borracho"
+    note: "Sesiones en Vikingo Estudios"

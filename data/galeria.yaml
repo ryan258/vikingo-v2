@@ -1,0 +1,266 @@
+collections:
+  - id: "accion"
+    title: "En Sesión · Toma Viva"
+    kicker: "Músicos, productores y noches de grabación"
+    description: "Instantes reales adentro de la sala: ensayos, tomas definitivas, escuchas en el control y amigos de la casa haciendo música."
+    cover: "/img/galeria/prev-accion.jpg"
+    photos:
+      - src: "/img/galeria/accion/mariano-y-nahuel.jpg"
+        width: 960
+        height: 720
+        title: "Mariano Esaín y Nahuel Martorelli en el control"
+        caption: "Trabajando sobre la consola Soundcraft durante una jornada de producción y mezcla."
+      - src: "/img/galeria/accion/m-esain-farfisa.jpg"
+        width: 960
+        height: 720
+        title: "Mariano Esaín en el órgano Farfisa"
+        caption: "Grabando texturas de órgano combo vintage en la sala principal."
+      - src: "/img/galeria/accion/m-esain-guitar.jpg"
+        width: 960
+        height: 720
+        title: "Mariano Esaín grabando guitarras"
+        caption: "Sesión de violas en piso con microfoneo dedicado."
+      - src: "/img/galeria/accion/mariano-esain-2.jpg"
+        width: 960
+        height: 720
+        title: "Escucha y dirección en sesión"
+        caption: "Mariano Esaín en plena jornada de grabación en Vikingo Estudios."
+      - src: "/img/galeria/accion/ella-es-palo-borracho.jpg"
+        width: 960
+        height: 720
+        title: "Sesión en vivo en la sala principal"
+        caption: "Banda completa compartiendo el piso de madera de la sala viva."
+      - src: "/img/galeria/accion/n-martorelli-drums.jpg"
+        width: 960
+        height: 555
+        title: "Nahuel Martorelli en baterías"
+        caption: "Ajustando el pulso desde los cascos vintage de la casa."
+      - src: "/img/galeria/accion/n-martorelli-piano.jpg"
+        width: 960
+        height: 720
+        title: "Nahuel Martorelli al piano"
+        caption: "Buscando acordes y arreglos en la intimidad de la sala."
+      - src: "/img/galeria/accion/emanero-vikingo.jpg"
+        width: 720
+        height: 960
+        title: "Emanero en Vikingo Estudios"
+        caption: "Registro vocal y producción en el estudio."
+      - src: "/img/galeria/accion/j-alcaraz-guitar.jpg"
+        width: 960
+        height: 555
+        title: "Toma de guitarras eléctricas"
+        caption: "J. Alcaraz grabando guitarras en la sala viva."
+      - src: "/img/galeria/accion/m-mendez-vocals.jpg"
+        width: 960
+        height: 555
+        title: "Toma vocal con filtro y condenser"
+        caption: "M. Méndez registrando voces principales en sala."
+      - src: "/img/galeria/accion/mermel.jpg"
+        width: 960
+        height: 720
+        title: "Sesión de Mermel"
+        caption: "Grabación de bases en Vikingo Estudios."
+      - src: "/img/galeria/accion/mermel-2.jpg"
+        width: 960
+        height: 720
+        title: "Mermel en la sala"
+        caption: "Momento de grabación con luz cálida de estudio."
+      - src: "/img/galeria/accion/orestes.jpg"
+        width: 480
+        height: 640
+        title: "Sesión con Orestes"
+        caption: "Postal de grabación en Ciudad Evita."
+
+  - id: "equipamiento"
+    title: "Fierros, Sala & Control"
+    kicker: "Válvulas, cinta abierta, micrófonos y maderas"
+    description: "Un recorrido visual por nuestra colección de micrófonos alemanes, preamplificadores vintage, amplificadores valvulares y la acústica de la sala."
+    cover: "/img/galeria/prev-equip.jpg"
+    photos:
+      - src: "/img/galeria/equipamiento/control.jpg"
+        width: 960
+        height: 519
+        title: "Control Room · Consola Soundcraft Studio 32"
+        caption: "Vista de la mesa inglesa de 32 canales y el monitoreo Dynaudio BM15 / Yamaha NS-10."
+      - src: "/img/galeria/equipamiento/control1.jpg"
+        width: 960
+        height: 720
+        title: "Puesto de ingeniería y ventana a sala"
+        caption: "Conexión visual directa entre el cuarto de control y la sala viva."
+      - src: "/img/galeria/equipamiento/pres.jpg"
+        width: 480
+        height: 720
+        title: "Racks de preamplificadores y procesos"
+        caption: "Módulos Telefunken, ecualizadores Siemens W295, API 2500 y conversión 192."
+      - src: "/img/galeria/equipamiento/pres2.jpg"
+        width: 720
+        height: 697
+        title: "Detalle de módulos analógicos"
+        caption: "El corazón del color analógico de Vikingo Estudios."
+      - src: "/img/galeria/equipamiento/376.jpg"
+        width: 960
+        height: 539
+        title: "Telefunken TAB V376 & Fierros Alemanes"
+        caption: "Ingeniería de broadcast alemán de época al servicio del rock y la música acústica."
+      - src: "/img/galeria/equipamiento/brauner.jpg"
+        width: 480
+        height: 720
+        title: "Brauner Edición Aniversario"
+        caption: "Condensador alemán de altísima definición para voces e instrumentos acústicos."
+      - src: "/img/galeria/equipamiento/414.jpg"
+        width: 720
+        height: 474
+        title: "AKG C414 en posición"
+        caption: "Clásico multipatrón indispensable para overheads, pianos y guitarras."
+      - src: "/img/galeria/equipamiento/beyer160.jpg"
+        width: 720
+        height: 480
+        title: "Beyerdynamic M160 (Doble Cinta)"
+        caption: "Calidez incomparable en guitarras eléctricas, cuerdas y metales."
+      - src: "/img/galeria/equipamiento/421.jpg"
+        width: 720
+        height: 474
+        title: "Sennheiser MD 421 Vintage"
+        caption: "El estándar indiscutido para toms, cajas de guitarra y vientos."
+      - src: "/img/galeria/equipamiento/mid-side.jpg"
+        width: 720
+        height: 960
+        title: "Configuración Mid-Side en sala"
+        caption: "Técnicas de microfoneo estéreo aprovechando la acústica natural del recinto."
+      - src: "/img/galeria/equipamiento/fig8.jpg"
+        width: 474
+        height: 720
+        title: "Microfoneo en Figura de 8"
+        caption: "Capturando el balance exacto entre sonido directo y ambiente de madera."
+      - src: "/img/galeria/equipamiento/mic-piano.jpg"
+        width: 480
+        height: 720
+        title: "Microfoneo del Piano Vertical Bentley"
+        caption: "Registro estéreo de cuerdas y tabla armónica."
+      - src: "/img/galeria/equipamiento/mics.jpg"
+        width: 816
+        height: 612
+        title: "Selección del Mic Locker"
+        caption: "Micrófonos listos antes de largar la sesión."
+      - src: "/img/galeria/equipamiento/ludwig-premier.jpg"
+        width: 960
+        height: 720
+        title: "Premier 1970 & Ludwig Supraphonic 1960"
+        caption: "Batería inglesa del '70 montada en el centro de la sala viva."
+      - src: "/img/galeria/equipamiento/premier-sala.jpg"
+        width: 474
+        height: 720
+        title: "La Premier '70 lista para grabar"
+        caption: "Microfoneo completo sobre piso flotante de madera."
+      - src: "/img/galeria/equipamiento/grestch2.jpg"
+        width: 720
+        height: 593
+        title: "Gretsch Custom Maple 1979"
+        caption: "El golpe clásico americano de fines de los '70."
+      - src: "/img/galeria/equipamiento/bassman.jpg"
+        width: 720
+        height: 439
+        title: "Fender Bassman 135 Silverface"
+        caption: "Cabezal valvular puro músculo para bajo o guitarra."
+      - src: "/img/galeria/equipamiento/acoustic.jpg"
+        width: 720
+        height: 474
+        title: "Cabezal Acoustic Model 160 (EE.UU.)"
+        caption: "Un clásico americano de época en el backline de Vikingo."
+      - src: "/img/galeria/equipamiento/equiposgtr.jpg"
+        width: 960
+        height: 720
+        title: "Pared de amplificadores y cajas"
+        caption: "Marshall JCM 800/900, Fender, Laney y Ampeg listos para elegir timbre."
+      - src: "/img/galeria/equipamiento/mas-violas.jpg"
+        width: 720
+        height: 960
+        title: "Rincón de guitarras en sesión"
+        caption: "Instrumentos descansando entre toma y toma."
+      - src: "/img/galeria/equipamiento/mamostreto.jpg"
+        width: 720
+        height: 960
+        title: "Torre de fierros y cinta"
+        caption: "Grabadora Tascam de 1 pulgada y fuente de potencia."
+      - src: "/img/galeria/equipamiento/img.jpg"
+        width: 960
+        height: 720
+        title: "Detalle de la sala viva"
+        caption: "Difusores y resonadores diafragmáticos diseñados a medida."
+
+  - id: "construccion"
+    title: "La Obra Artesanal (2009)"
+    kicker: "Bitácora de cómo levantamos el estudio con nuestras manos"
+    description: "El archivo histórico de la familia Martorelli construyendo desde cero cada difusor, trampa de graves, panel de piedra y piso de madera antes de inaugurar a principios de 2009."
+    cover: "/img/galeria/prev-estudio.jpg"
+    photos:
+      - src: "/img/galeria/constuccion/DSCF0629.jpg"
+        width: 1280
+        height: 960
+        title: "Estructura acústica y bastidores"
+        caption: "Montaje artesanal de las cámaras acústicas y resonadores en las paredes de la sala."
+      - src: "/img/galeria/constuccion/DSCF0630.jpg"
+        width: 1280
+        height: 960
+        title: "Carpintería acústica a medida"
+        caption: "Cada difusor fue calculado según las dimensiones exactas del recinto."
+      - src: "/img/galeria/constuccion/DSCF0631.jpg"
+        width: 1280
+        height: 960
+        title: "Cielorraso acústico y difusores superiores"
+        caption: "Construcción de las nubes y paneles del techo para controlar reflexiones tempranas."
+      - src: "/img/galeria/constuccion/DSCF0632.jpg"
+        width: 1280
+        height: 960
+        title: "El mural de piedra natural y los difusores"
+        caption: "Combinación de piedra viva y madera para una difusión orgánica en todo el espectro."
+      - src: "/img/galeria/constuccion/DSCF0633.jpg"
+        width: 1280
+        height: 960
+        title: "Revestimiento y trampas diafragmáticas"
+        caption: "Trabajo en familia cuidando cada junta y cámara de aire."
+      - src: "/img/galeria/constuccion/DSCF0634.jpg"
+        width: 1280
+        height: 960
+        title: "Visor acústico entre control y sala"
+        caption: "Instalación de los paños vidriados de alta aislación."
+      - src: "/img/galeria/constuccion/DSCF0635.jpg"
+        width: 1280
+        height: 960
+        title: "Terminaciones en madera"
+        caption: "La sala empezando a tomar su color cálido definitivo."
+      - src: "/img/galeria/constuccion/DSCF0636.jpg"
+        width: 1280
+        height: 960
+        title: "Piso de madera dura y paneles"
+        caption: "El piso reflectivo que le da vida a las baterías e instrumentos acústicos."
+      - src: "/img/galeria/constuccion/DSCF0637.jpg"
+        width: 1280
+        height: 960
+        title: "Detalle de difusores policilíndricos y modulares"
+        caption: "Artesanía acústica hecha en Ciudad Evita."
+      - src: "/img/galeria/constuccion/DSCF0638.jpg"
+        width: 1280
+        height: 960
+        title: "Cableado e infraestructura técnica"
+        caption: "Tendido de líneas balanceadas y paneles de conexión."
+      - src: "/img/galeria/constuccion/DSCF0639.jpg"
+        width: 1280
+        height: 960
+        title: "Montaje del cuarto de control"
+        caption: "Preparando el espacio para la consola Soundcraft y los racks analógicos."
+      - src: "/img/galeria/constuccion/DSCF0640.jpg"
+        width: 1280
+        height: 960
+        title: "Iluminación cálida y acústica finalizada"
+        caption: "Los últimos detalles antes de entrar los instrumentos."
+      - src: "/img/galeria/constuccion/DSCF0641.jpg"
+        width: 960
+        height: 1280
+        title: "Perspectiva vertical de los resonadores"
+        caption: "Diseño pensado para lograr una curva plana sin ecualización artificial."
+      - src: "/img/galeria/constuccion/DSCF0642.jpg"
+        width: 1280
+        height: 960
+        title: "La sala lista para inaugurar (Principios de 2009)"
+        caption: "El sueño de la familia Martorelli convertido en estudio."

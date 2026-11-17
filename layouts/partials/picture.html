@@ -1,0 +1,49 @@
+{{- $src := strings.TrimPrefix "/" .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $sizes := .sizes | default "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" -}}
+{{- $priority := .priority | default false -}}
+{{- $lazy := .lazy | default (not $priority) -}}
+{{- $res := resources.Get $src -}}
+
+{{- if $res -}}
+  {{- $origW := $res.Width -}}
+  {{- $origH := $res.Height -}}
+  {{- $webpFull := $res.Process "webp" -}}
+  {{- $srcsetParts := slice (printf "%s %dw" $webpFull.RelPermalink $origW) -}}
+
+  {{- if gt $origW 540 -}}
+    {{- $w480 := $res.Resize "480x webp" -}}
+    {{- $srcsetParts = $srcsetParts | append (printf "%s 480w" $w480.RelPermalink) -}}
+  {{- end -}}
+
+  {{- if gt $origW 900 -}}
+    {{- $w800 := $res.Resize "800x webp" -}}
+    {{- $srcsetParts = $srcsetParts | append (printf "%s 800w" $w800.RelPermalink) -}}
+  {{- end -}}
+
+  <picture>
+    <source
+      type="image/webp"
+      srcset="{{ delimit $srcsetParts ", " }}"
+      sizes="{{ $sizes }}"
+    >
+    <img
+      src="{{ $res.RelPermalink }}"
+      alt="{{ $alt }}"
+      width="{{ $origW }}"
+      height="{{ $origH }}"
+      {{- with $class }} class="{{ . }}"{{ end -}}
+      {{- if $priority }} fetchpriority="high"{{ else if $lazy }} loading="lazy"{{ end -}}
+    >
+  </picture>
+{{- else -}}
+  <img
+    src="{{ $src | relURL }}"
+    alt="{{ $alt }}"
+    {{- with .width }} width="{{ . }}"{{ end -}}
+    {{- with .height }} height="{{ . }}"{{ end -}}
+    {{- with $class }} class="{{ . }}"{{ end -}}
+    {{- if $priority }} fetchpriority="high"{{ else if $lazy }} loading="lazy"{{ end -}}
+  >
+{{- end -}}

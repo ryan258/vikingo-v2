@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-copy">
+        <p class="eyebrow">Error 404 · Cinta fuera de carrete</p>
+        <h1>Esta pista no está en el archivo.</h1>
+        <p>
+          La página que buscás se mudó o nunca pasó por la consola. Volvé al inicio para recorrer la sala, el rider de fierros o escribirnos al control.
+        </p>
+      </div>
+      <div class="cta-buttons">
+        <a class="btn btn-primary" href="{{ "" | relURL }}">Volver al inicio</a>
+        <a class="btn btn-ghost" href="{{ "equipamiento/" | relURL }}">Ver ficha técnica</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

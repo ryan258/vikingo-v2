@@ -1,0 +1,49 @@
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a class="site-logo" href="{{ "" | relURL }}">
+      <img
+        src="{{ "img/vikingo-logo-mini.png" | relURL }}"
+        alt=""
+        width="42"
+        height="42"
+        class="site-logo-mark"
+      >
+      <span class="site-logo-text">
+        <span class="site-logo-name">Vikingo Estudios</span>
+        <span class="site-logo-sub">Buenos Aires · Est. 2009</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Principal">
+      <button
+        class="menu-button"
+        type="button"
+        popovertarget="site-menu"
+        popovertargetaction="toggle"
+        aria-controls="site-menu"
+      >
+        <svg class="menu-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="7" x2="21" y2="7"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="17" x2="15" y2="17"></line>
+        </svg>
+        <span>Menú</span>
+      </button>
+
+      <ul id="site-menu" class="site-menu" popover="auto">
+        {{ $current := .RelPermalink }}
+        {{ $homeURL := "" | relURL }}
+        {{ range .Site.Menus.main }}
+          {{ $menuURL := (strings.TrimPrefix "/" .URL) | relURL }}
+          {{ $isCurrent := or (and (eq $menuURL $homeURL) (eq $current $homeURL)) (and (ne $menuURL $homeURL) (hasPrefix $current $menuURL)) }}
+          <li>
+            <a
+              href="{{ $menuURL }}"
+              {{ if $isCurrent }}aria-current="page"{{ end }}
+            >{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

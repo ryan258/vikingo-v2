@@ -1,0 +1,80 @@
+baseURL = "https://vikingo-v2.ryanleejwebdev.workers.dev/"
+locale = "es-AR"
+defaultContentLanguage = "es"
+title = "Vikingo Estudios · Refugio Analógico & Sala de Grabación en Buenos Aires"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "assets/img"
+    target = "static/img"
+
+[imaging]
+  resampleFilter = "Lanczos"
+  [imaging.jpeg]
+    quality = 82
+  [imaging.webp]
+    quality = 82
+
+[params]
+  tagline = "De los siete mares"
+  subtitle = "Estudio de grabación, mezcla analógica y producción musical creado artesanalmente por la familia Martorelli."
+  founded = 2009
+  neighborhood = "Ciudad Evita"
+  city = "Buenos Aires"
+  country = "Argentina"
+  accessNote = "A 25 minutos del obelisco por Autopista Riccheri · Estacionamiento propio y carga directa a sala"
+  phoneMobile = "011 15-5491-3025"
+  phoneMobileIntl = "+5491154913025"
+  phoneLandline = "011 4487-6588"
+  emailStudio = "Vikingostudio@gmail.com"
+  emailProducer = "nahuelmartorelli@gmail.com"
+  heroImage = "img/hero-home-main.jpg"
+  logo = "img/vikingo-logo.png"
+
+[[menus.main]]
+  name = "Inicio"
+  url = ""
+  weight = 10
+
+[[menus.main]]
+  name = "La Sala & Historia"
+  url = "historia/"
+  weight = 20
+
+[[menus.main]]
+  name = "Oficios"
+  url = "servicios/"
+  weight = 30
+
+[[menus.main]]
+  name = "Fierros"
+  url = "equipamiento/"
+  weight = 40
+
+[[menus.main]]
+  name = "Galería"
+  url = "galeria/"
+  weight = 50
+
+[[menus.main]]
+  name = "Los Martorelli"
+  url = "staff/"
+  weight = 60
+
+[[menus.main]]
+  name = "Contacto"
+  url = "contacto/"
+  weight = 70
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,105 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="page-hero-media">
+    {{ partial "picture.html" (dict
+      "src" "/img/galeria/prev-accion.jpg"
+      "alt" "Sesión de grabación en Vikingo Estudios"
+      "sizes" "100vw"
+      "priority" true
+    ) }}
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Archivo Visual · Tres Colecciones</p>
+    <h1>La vida adentro del estudio en imágenes.</h1>
+    <p class="page-hero-lead">
+      Más de cincuenta postales entre sesiones en vivo, primeros planos de nuestros fierros analógicos y el registro histórico de cuando levantamos el estudio a mano en 2009.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <nav class="gallery-jump-nav" aria-label="Colecciones de la galería">
+      {{ range hugo.Data.galeria.collections }}
+        <a class="pill-btn" href="#coleccion-{{ .id }}">
+          {{ .title }} <span class="pill-count">({{ len .photos }})</span>
+        </a>
+      {{ end }}
+    </nav>
+
+    {{ range $colIndex, $col := hugo.Data.galeria.collections }}
+      <section class="gallery-collection-section" id="coleccion-{{ $col.id }}">
+        <header class="gallery-collection-header">
+          <div>
+            <p class="mono-tag">COLECCIÓN 0{{ add $colIndex 1 }} · {{ upper $col.kicker }}</p>
+            <h2>{{ $col.title }}</h2>
+            <p class="gallery-collection-desc">{{ $col.description }}</p>
+          </div>
+          <span class="gear-count-badge">{{ len $col.photos }} fotografías</span>
+        </header>
+
+        <div class="gallery-masonry-grid">
+          {{ range $photoIndex, $photo := $col.photos }}
+            {{- $res := resources.Get (strings.TrimPrefix "/" $photo.src) -}}
+            {{- $fullUrl := (strings.TrimPrefix "/" $photo.src) | relURL -}}
+            {{- if $res -}}
+              {{- $fullWebp := $res.Process "webp" -}}
+              {{- $fullUrl = $fullWebp.RelPermalink -}}
+            {{- end -}}
+            <figure class="gallery-item">
+              <button
+                type="button"
+                class="gallery-trigger"
+                data-lightbox-src="{{ $fullUrl }}"
+                data-lightbox-title="{{ $photo.title }}"
+                data-lightbox-caption="{{ $photo.caption }}"
+                data-lightbox-collection="{{ $col.title }}"
+                data-lightbox-width="{{ $photo.width }}"
+                data-lightbox-height="{{ $photo.height }}"
+                aria-label="Ampliar fotografía: {{ $photo.title }}"
+              >
+                {{ partial "picture.html" (dict
+                  "src" $photo.src
+                  "alt" (printf "%s — %s" $photo.title $photo.caption)
+                  "sizes" "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                ) }}
+                <span class="gallery-zoom-badge" aria-hidden="true">Ampliar</span>
+              </button>
+              <figcaption class="gallery-caption">
+                <strong>{{ $photo.title }}</strong>
+                <span>{{ $photo.caption }}</span>
+              </figcaption>
+            </figure>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+</section>
+
+<dialog id="gallery-lightbox" class="lightbox-dialog" closedby="any" aria-labelledby="lightbox-title">
+  <div class="lightbox-inner">
+    <header class="lightbox-header">
+      <div>
+        <p id="lightbox-collection" class="mono-tag"></p>
+        <h2 id="lightbox-title" class="lightbox-heading"></h2>
+      </div>
+      <form method="dialog">
+        <button value="close" class="lightbox-close-btn" autofocus aria-label="Cerrar imagen ampliada">
+          Cerrar ✕
+        </button>
+      </form>
+    </header>
+
+    <div class="lightbox-stage">
+      <button type="button" class="lightbox-nav-btn prev" id="lightbox-prev" aria-label="Fotografía anterior">←</button>
+      <figure class="lightbox-figure">
+        <img id="lightbox-img" src="" alt="" width="960" height="720">
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+      <button type="button" class="lightbox-nav-btn next" id="lightbox-next" aria-label="Fotografía siguiente">→</button>
+    </div>
+  </div>
+</dialog>
+{{ end }}

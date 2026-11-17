@@ -1,0 +1,124 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="page-hero-media">
+    {{ partial "picture.html" (dict
+      "src" "/img/hero-home-main.jpg"
+      "alt" "Sala viva de Vikingo Estudios en Ciudad Evita, Buenos Aires"
+      "sizes" "100vw"
+      "priority" true
+    ) }}
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Contacto & Reservas · Ciudad Evita, Buenos Aires</p>
+    <h1>Vení a conocer la sala y charlemos tu disco.</h1>
+    <p class="page-hero-lead">
+      Estamos en Ciudad Evita, a 25 minutos de Capital por Autopista Riccheri, con estacionamiento cómodo y acceso directo a nivel de calle para bajar equipos sin escaleras ni estrés.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-channels">
+        <h2>Canales directos con el estudio</h2>
+        <p class="lead-paragraph">
+          Escribinos o llamanos para consultar disponibilidad de fechas, presupuestar jornadas de grabación, mezcla o mastering, o coordinar una visita previa para escuchar la sala.
+        </p>
+
+        <div class="contact-cards-list">
+          <div class="contact-channel-card">
+            <span class="mono-tag">TELÉFONOS & WHATSAPP</span>
+            <h3>Línea Móvil & Fija</h3>
+            <p class="contact-value">
+              <a href="tel:+5491154913025">{{ .Site.Params.phoneMobile }}</a>
+              <span class="sep">|</span>
+              <a href="tel:+541144876588">{{ .Site.Params.phoneLandline }}</a>
+            </p>
+            <div class="contact-card-actions">
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/5491154913025?text=Hola%20Vikingo%20Estudios%2C%20les%20escribo%20para%20consultar%20por%20una%20sesi%C3%B3n."
+                target="_blank"
+                rel="noopener"
+              >
+                Abrir WhatsApp directo →
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-channel-card">
+            <span class="mono-tag">CORREO ELECTRÓNICO</span>
+            <h3>Estudio & Producción Artística</h3>
+            <ul class="email-list">
+              <li>
+                <span>Estudio General / Claudio «Vikingo»:</span>
+                <a href="mailto:{{ .Site.Params.emailStudio }}?subject=Hola%20Vikingo%20-%20Consulta%20de%20Sesi%C3%B3n">{{ .Site.Params.emailStudio }}</a>
+              </li>
+              <li>
+                <span>Producción Musical / Nahuel Martorelli:</span>
+                <a href="mailto:{{ .Site.Params.emailProducer }}?subject=Hola%20Nahuel%20-%20Producci%C3%B3n%20en%20Vikingo%20Estudios">{{ .Site.Params.emailProducer }}</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-channel-card">
+            <span class="mono-tag">UBICACIÓN & ACCESO</span>
+            <h3>Ciudad Evita · Provincia de Buenos Aires</h3>
+            <p>
+              Un entorno verde, silencioso y tranquilo en el Gran Buenos Aires. Ideal para concentrarse todo el día en la música sin el caos de tránsito ni problemas para estacionar con la camioneta llena de equipos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="contact-builder-card" aria-labelledby="builder-heading">
+        <p class="mono-tag">ARMADOR DE CONSULTA RÁPIDA</p>
+        <h2 id="builder-heading">Contanos qué tenés entre manos</h2>
+        <p class="builder-sub">
+          Completá los datos de tu proyecto y abrí tu mensaje listo por correo o WhatsApp sin perder tiempo.
+        </p>
+
+        <form id="session-inquiry-form" class="inquiry-form">
+          <div class="form-field">
+            <label for="inq-name">Tu nombre o nombre de la banda / proyecto</label>
+            <input type="text" id="inq-name" name="name" autocomplete="name" placeholder="Ej. Los Noctámbulos / Sofía Gómez" required>
+          </div>
+
+          <div class="form-field">
+            <label for="inq-email">Tu correo o teléfono de contacto</label>
+            <input type="text" id="inq-email" name="contact" autocomplete="email" placeholder="tu@email.com o 11-xxxx-xxxx" required>
+          </div>
+
+          <div class="form-field">
+            <label for="inq-service">¿Qué oficio estás buscando?</label>
+            <select id="inq-service" name="service">
+              <option value="Grabación en Sala Viva">Grabación en Sala Viva (Banda / Solista)</option>
+              <option value="Grabación en Cinta Abierta 1&quot;">Grabación en Cinta Abierta Tascam 1" (16 canales)</option>
+              <option value="Mezcla Analógica / Híbrida">Mezcla Analógica / Híbrida</option>
+              <option value="Mastering Analógico">Mastering Analógico</option>
+              <option value="Producción Artística Integral">Producción Artística Integral</option>
+              <option value="Sesión Audiovisual en Vivo">Sesión Audiovisual en Vivo</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="inq-details">Contanos sobre las canciones, formación y fechas estimadas</label>
+            <textarea id="inq-details" name="details" rows="4" placeholder="Ej. Somos un cuarteto (batería, bajo, dos violas y voz). Queremos grabar 4 temas en piso durante dos jornadas el mes que viene..."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" data-channel="whatsapp">
+              Enviar consulta por WhatsApp
+            </button>
+            <button type="submit" class="btn btn-outline" data-channel="mailto">
+              Enviar por Correo Electrónico
+            </button>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,64 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-emblem">
+          <img
+            src="{{ "img/vikingo-logo.png" | relURL }}"
+            alt="Emblema de Vikingo Estudios"
+            width="64"
+            height="64"
+            loading="lazy"
+          >
+          <div>
+            <p class="footer-kicker">«{{ .Site.Params.tagline }}»</p>
+            <p class="footer-title">Vikingo Estudios</p>
+          </div>
+        </div>
+        <p class="footer-manifesto">
+          Creación artesanal de la familia Martorelli inaugurada a principios de 2009. Sala viva de madera y piedra, cinta abierta de una pulgada y fierros analógicos con historia en el corazón del Gran Buenos Aires.
+        </p>
+        <p class="footer-location">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 1 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span><strong>{{ .Site.Params.neighborhood }}</strong> · {{ .Site.Params.city }}, {{ .Site.Params.country }}</span>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-heading">Recorrido</p>
+        <ul class="footer-links">
+          {{ range .Site.Menus.main }}
+            <li><a href="{{ (strings.TrimPrefix "/" .URL) | relURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-heading">Línea Directa al Control</p>
+        <ul class="footer-contact-list">
+          <li>
+            <span class="footer-label">Móvil / WhatsApp</span>
+            <a href="tel:+5491154913025">{{ .Site.Params.phoneMobile }}</a>
+          </li>
+          <li>
+            <span class="footer-label">Línea Fija del Estudio</span>
+            <a href="tel:+541144876588">{{ .Site.Params.phoneLandline }}</a>
+          </li>
+          <li>
+            <span class="footer-label">Estudio & Reservas</span>
+            <a href="mailto:{{ .Site.Params.emailStudio }}?subject=Consulta%20de%20Sesi%C3%B3n%20-%20Vikingo%20Estudios">{{ .Site.Params.emailStudio }}</a>
+          </li>
+          <li>
+            <span class="footer-label">Producción Artística (Nahuel)</span>
+            <a href="mailto:{{ .Site.Params.emailProducer }}?subject=Producci%C3%B3n%20Musical%20-%20Vikingo%20Estudios">{{ .Site.Params.emailProducer }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {{ .Site.Params.founded }}–2026 <strong>Vikingo Estudios</strong> · Familia Martorelli · Ciudad Evita, Buenos Aires.</p>
+      <p class="footer-meta-tag">Acústica natural · Cinta abierta 1" · Válvulas & Madera</p>
+    </div>
+  </div>
+</footer>

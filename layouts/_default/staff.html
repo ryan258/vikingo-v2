@@ -1,0 +1,89 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="page-hero-media">
+    {{ partial "picture.html" (dict
+      "src" "/img/header-historia.jpg"
+      "alt" "Nahuel, Claudio «Vikingo» y Damián «Cooczon» Martorelli en Vikingo Estudios"
+      "sizes" "100vw"
+      "priority" true
+    ) }}
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">El Equipo · Casa de Familia</p>
+    <h1>Los Martorelli: oficio de ruta, consola y sala.</h1>
+    <p class="page-hero-lead">
+      Detrás de cada micrófono, cada empalme de cinta y cada mate compartido en el control está el pulso de una familia dedicada de lleno a la música.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="staff-profiles-stack">
+      {{ range hugo.Data.staff.members }}
+        <article class="staff-profile-card" id="{{ .id }}">
+          <div class="staff-profile-photo">
+            {{ partial "picture.html" (dict
+              "src" .image
+              "alt" (printf "Retrato de %s" .name)
+              "sizes" "(max-width: 900px) 100vw, 45vw"
+            ) }}
+            <span class="staff-badge">{{ .badge }}</span>
+          </div>
+
+          <div class="staff-profile-body">
+            <p class="mono-tag">{{ .role }}</p>
+            <h2>{{ .name }}</h2>
+
+            <blockquote class="staff-quote">
+              <p>«{{ .quote }}»</p>
+            </blockquote>
+
+            <p class="staff-bio">{{ .bio }}</p>
+
+            {{ with .artists }}
+              <div class="staff-credits-box">
+                <h3>Trabajos y camino compartido junto a:</h3>
+                <ul class="artist-tags">
+                  {{ range . }}
+                    <li>{{ . }}</li>
+                  {{ end }}
+                </ul>
+              </div>
+            {{ end }}
+
+            {{ with .specialties }}
+              <div class="staff-credits-box">
+                <h3>Especialidades en el estudio:</h3>
+                <ul class="artist-tags">
+                  {{ range . }}
+                    <li>{{ . }}</li>
+                  {{ end }}
+                </ul>
+              </div>
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section cta-banner-section">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-copy">
+        <p class="eyebrow">Trato Directo, Sin Intermediarios</p>
+        <h2>Hablá directamente con nosotros para armar tu proyecto.</h2>
+        <p>
+          Ya sea para producir un álbum desde cero con Nahuel, planificar el microfoneo y la mezcla con Damián, o coordinar jornadas con Claudio: en Vikingo siempre te atiende quien va a estar al lado tuyo en la sesión.
+        </p>
+      </div>
+      <div class="cta-buttons">
+        <a class="btn btn-primary" href="{{ "contacto/" | relURL }}">Escribir al estudio</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

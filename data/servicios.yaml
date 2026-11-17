@@ -1,0 +1,75 @@
+- id: "grabacion"
+  number: "01"
+  title: "Grabación en Sala Viva"
+  shortTitle: "Grabación"
+  kicker: "Toma en piso · Multipista · Cinta & HD"
+  image: "/img/servicios/grabacion.jpg"
+  width: 768
+  height: 512
+  alt: "Sala de grabación de Vikingo Estudios con difusores de madera y micrófonos listos para sesión"
+  summary: "En Vikingo el protagonista sos vos y tu banda tocando de verdad. Nuestra sala fue concebida para que el aire entre los instrumentos se escuche vivo, noble y sin artificios."
+  lead: "En Vikingo Estudios el centro de la escena sos vos, tu banda y el aire que se arma cuando tocan juntos en el mismo cuarto."
+  paragraphs:
+    - "Diseñamos cada sesión a la medida de tu obra. La geometría de la sala y su distribución de difusores y resonadores diafragmáticos logran una respuesta pareja y natural, ideal tanto para registrar una base de rock cruda en vivo como para capturar la intimidad de un piano acústico, cuerdas o vientos."
+    - "La elección de micrófonos —desde condensadores valvulares y alemanes hasta cintas Beyerdynamic— junto al pulso de nuestros técnicos guían el recorrido de la toma para que el audio ya suene a disco desde el monitoreo."
+  highlights:
+    - "Tomas en vivo de banda completa con líneas visuales limpias"
+    - "Registro híbrido: cinta abierta Tascam 1\" (16 canales) y Pro Tools HD"
+    - "Cabina y sala principal con reverberación natural controlada en madera y piedra"
+
+- id: "mezcla"
+  number: "02"
+  title: "Mezcla Analógica & Híbrida"
+  shortTitle: "Mezcla"
+  kicker: "Consola Inglesa · Fierros Alemanes · Pro Tools HD"
+  image: "/img/servicios/mezcla.jpg"
+  width: 768
+  height: 512
+  alt: "Consola analógica Soundcraft y racks de proceso en el control room de Vikingo Estudios"
+  summary: "La calidez del hierro alemán y la consola inglesa cruzada con la precisión quirúrgica del mundo digital. Mezclamos buscando carácter, profundidad y tridimensionalidad."
+  lead: "No elegimos entre dos mundos: hacemos dialogar la nobleza eléctrica de las válvulas y los transformadores con la flexibilidad digital."
+  paragraphs:
+    - "En esa alquimia aparece el grano que distingue a un disco con identidad. Pasamos tus pistas por nuestra consola inglesa Soundcraft Studio de 32 canales, preamplificadores Telefunken de época, ecualizadores Siemens W295 y compresores API 2500 y tipo 1176."
+    - "Trabajamos cada mezcla como una pieza artesanal: abriendo el plano estéreo, cuidando el golpe del bombo y el tambor, y dándole a la voz ese lugar frontal y cercano que te respira al oído."
+  highlights:
+    - "Suma y ruteo por consola Soundcraft Studio 32 canales (Inglaterra)"
+    - "Cadena de color con Telefunken V72/V672, Siemens W295 y API 2500"
+    - "Monitoreo de referencia en Dynaudio BM15 y el clásico estándar Yamaha NS-10"
+
+- id: "mastering"
+  number: "03"
+  title: "Mastering Analógico"
+  shortTitle: "Mastering"
+  kicker: "Cadena de Salida · Cohesión · Peso Sonoro"
+  image: "/img/servicios/mastering.jpg"
+  width: 768
+  height: 512
+  alt: "Racks de compresores y ecualizadores analógicos utilizados para mastering en Vikingo Estudios"
+  summary: "El último trazo antes de que el disco salga a la calle. Ajustamos la dinámica, el color armónico y el equilibrio espectral mediante compresores y ecualizadores analógicos."
+  lead: "Con una mirada integral sobre la obra, el mastering en Vikingo busca esa cohesión final que hermana todas las canciones de un álbum o EP."
+  paragraphs:
+    - "Refinamos la saturación armónica, la profundidad de graves y el aire en los agudos sin aplastar la dinámica ni la vida de la interpretación original."
+    - "Mediante limitadores, compresores de bus analógicos y ecualización de precisión, preparamos tu material tanto para plataformas digitales de streaming como para edición en vinilo o formato físico."
+  highlights:
+    - "Compresión de bus analógica API 2500 y ecualización pasiva/activa"
+    - "Cuidado estricto del rango dinámico y la pegada real del audio"
+    - "Entregas optimizadas para streaming, CD y corte de vinilo"
+
+- id: "produccion"
+  number: "04"
+  title: "Producción Artística & Audiovisual"
+  shortTitle: "Producción musical"
+  kicker: "Dirección Musical · Arreglos · Sesiones en Vivo"
+  image: "/img/servicios/produccion.jpg"
+  width: 768
+  height: 512
+  alt: "Producción musical y sesión de grabación en vivo en Vikingo Estudios"
+  summary: "Acompañamos a bandas y solistas desde la maqueta desnuda hasta la obra terminada: preproducción, arreglos, curaduría de timbres y realización para cine y sesiones en vivo."
+  lead: "Producir es escuchar qué pide la canción antes de prender el primer equipo."
+  paragraphs:
+    - "Guiamos a bandas, cantautores y proyectos instrumentales en todo el proceso creativo: desde la elección de tempos, estructuras y arreglos en la preproducción, hasta la búsqueda del timbre exacto en nuestro backline de pianos, órganos Farfisa, Fender Rhodes, amplificadores valvulares y baterías de los años '60 y '70."
+    - "Además, realizamos producción integral de música para cine, publicidad y registros audiovisuales de sesiones en vivo dentro de nuestra sala principal."
+  highlights:
+    - "Preproducción artística y dirección en piso junto a Nahuel Martorelli"
+    - "Backline histórico a disposición de cada arreglo (Rhodes, Farfisa, Bentley, Ludwig, Fender, Marshall)"
+    - "Realización de sesiones audiovisuales en vivo y sonido para cine y video"

@@ -1,0 +1,99 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="page-hero-media">
+    {{ partial "picture.html" (dict
+      "src" "/img/servicios/recording.jpg"
+      "alt" "Sesión de grabación en Vikingo Estudios"
+      "sizes" "100vw"
+      "priority" true
+    ) }}
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Oficios del Estudio · Audio & Producción</p>
+    <h1>Cada disco pide su propio ritual de trabajo.</h1>
+    <p class="page-hero-lead">
+      Desde la toma cruda en piso o en cinta abierta hasta la mezcla híbrida y el mastering analógico: acompañamos tu música respetando tu búsqueda artística y poniéndole el hombro a cada detalle.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="services-detailed-stack">
+      {{ range hugo.Data.servicios }}
+        <article class="service-feature-row" id="{{ .id }}">
+          <div class="service-feature-media">
+            {{ partial "picture.html" (dict
+              "src" .image
+              "alt" .alt
+              "sizes" "(max-width: 900px) 100vw, 50vw"
+            ) }}
+            <div class="service-feature-badge">
+              <span class="mono-tag">OFICIO {{ .number }}</span>
+              <span>{{ .kicker }}</span>
+            </div>
+          </div>
+
+          <div class="service-feature-copy">
+            <h2>{{ .title }}</h2>
+            <p class="lead-paragraph">{{ .lead }}</p>
+            {{ range .paragraphs }}
+              <p>{{ . }}</p>
+            {{ end }}
+
+            <div class="service-checklist-box">
+              <h3>Claves de trabajo en Vikingo:</h3>
+              <ul>
+                {{ range .highlights }}
+                  <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </div>
+
+            <div class="service-cta-row">
+              <a class="btn btn-primary" href="{{ "contacto/" | relURL }}?servicio={{ .id }}">Consultar por {{ .shortTitle }}</a>
+              <a class="btn btn-link" href="{{ "equipamiento/" | relURL }}">Ver fierros disponibles →</a>
+            </div>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section modalities-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Modalidades de Sesión</p>
+        <h2 class="section-title">¿Cómo podemos trabajar juntos?</h2>
+      </div>
+    </div>
+
+    <div class="modalities-grid">
+      <article class="modality-card">
+        <span class="mono-tag">MODALIDAD A</span>
+        <h3>Jornadas de Grabación (Toma en Vivo o Overdubs)</h3>
+        <p>
+          Vení con tu banda o proyecto solista por media jornada o jornada completa. Incluye uso de la sala principal, cuarto de control, microfonía completa, backline de la casa e ingeniero de grabación.
+        </p>
+      </article>
+      <article class="modality-card">
+        <span class="mono-tag">MODALIDAD B</span>
+        <h3>Mezcla Híbrida & Mastering Analógico</h3>
+        <p>
+          Tanto si grabaste en Vikingo como si traés tus pistas de otro estudio o home studio: pasamos tu material por la consola Soundcraft, los preamps Telefunken y el bus API 2500 para darle cuerpo, aire y profundidad real.
+        </p>
+      </article>
+      <article class="modality-card">
+        <span class="mono-tag">MODALIDAD C</span>
+        <h3>Producción Artística Integral & Live Sessions</h3>
+        <p>
+          Trabajamos las canciones desde la preproducción junto a Nahuel Martorelli, definiendo estructuras, tempos y timbres, o armamos una sesión audiovisual en vivo en nuestra sala de madera y piedra.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+{{ end }}
