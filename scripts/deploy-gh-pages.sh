@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Build production site into ./public (includes .nojekyll and /vikingo-v2/ subpath)
 rm -rf public
-hugo --gc --minify
+hugo --gc --minify --baseURL "https://ryan258.github.io/vikingo-v2/"
 
 # Push ./public to the gh-pages branch using a temporary git worktree/repo
 cd public
